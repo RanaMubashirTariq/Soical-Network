@@ -66,7 +66,7 @@ export default function OverlapGroupWrapperSubsection  ()  {
               key={item.label}
               className="py-2 text-black text-lg font-medium border-b border-gray-300"
             >
-              <a href={`/${item.href}`} className="block hover:underline" onClick={() => setIsMenuOpen(false)}>
+              <a href={`/${item.href}`} className="block " onClick={() => setIsMenuOpen(false)}>
                 {item.label}
               </a>
             </div>
