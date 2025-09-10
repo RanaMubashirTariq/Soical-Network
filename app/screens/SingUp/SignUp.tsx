@@ -3,6 +3,15 @@ import React, { useEffect, useRef, useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 // Sign Up Modal (auto open without button)
 
+type SignupErrors = Partial<{
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+  terms: string;
+}>;
+
 export default function SignUpModalDemo({ open, onClose }: { open: boolean; onClose: () => void }) {
   if (!open) return null; // Don’t render when closed
 
@@ -34,11 +43,11 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [acceptTerms, setAcceptTerms] = useState(false);
-  const [errors, setErrors] = useState<any>({});
+  const [errors, setErrors] = useState<SignupErrors>({});
   const [submitting, setSubmitting] = useState(false);
 
   const validate = () => {
-    const next: any = {};
+    const next: SignupErrors = {};
     if (!firstName.trim()) next.firstName = "First name required";
     if (!lastName.trim()) next.lastName = "Last name required";
     const emailOk = /[^@\s]+@[^@\s]+\.[^@\s]+/.test(email);
