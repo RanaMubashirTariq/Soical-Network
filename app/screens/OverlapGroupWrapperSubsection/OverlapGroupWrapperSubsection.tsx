@@ -24,7 +24,7 @@ export default function OverlapGroupWrapperSubsection  ()  {
       <div className="relative w-full h-full">
         <img className="w-full h-[650px] max-[1000px]:h-[980px] max-[600px]:h-[780px] max-[350px]:h-[770px]  object-cover  absolute inset-0 z-10" alt="Background" src='background.jpg'/>
 
-        <header className="relative z-20 flex w-full   items-center justify-between px-[120px] max-[1300px]:px-[80px] max-[1100px]:px-[50px] max-[767px]:px-[25px] pt-10 max-[767px]:pt-5 bg-white/30 slide-down-enter slide-animate is-visible">
+        <header className="relative z-50 flex w-full   items-center justify-between px-[120px] max-[1300px]:px-[80px] max-[1100px]:px-[50px] max-[767px]:px-[25px] pt-10 max-[767px]:pt-5 bg-white/30 slide-down-enter slide-animate is-visible">
         {/* Logo */}
         <img className="w-16 h-16 max-[767px]:w-11 max-[767px]:h-11" alt="Logo" src="/logo.png" />
 
@@ -43,11 +43,14 @@ export default function OverlapGroupWrapperSubsection  ()  {
             ))}
           </div>
 
-          <img
+           <a href="/#signup">
+           <img
             alt="Frame"
             src="/Frame.png"
             className="w-[114px] h-[33px] object-cover cursor-pointer transform transition-transform duration-300 hover:scale-90"
           />
+            </a>
+
         </nav>
 
         {/* Mobile Toggle Button (visible ≤ 1000px) */}
@@ -71,11 +74,14 @@ export default function OverlapGroupWrapperSubsection  ()  {
               </a>
             </div>
           ))}
-          <img
+          
+          <a href="/#signup">
+           <img
             alt="Frame"
             src="/Frame.png"
-            className="w-[114px] h-[33px] object-cover mt-[30px] cursor-pointer transform transition-transform duration-300 hover:scale-90"
+            className="w-[114px] h-[33px] object-cover cursor-pointer transform transition-transform duration-300 hover:scale-90 mt-4"
           />
+            </a>
         </div>
         
       )}
@@ -97,16 +103,16 @@ export default function OverlapGroupWrapperSubsection  ()  {
             </p>
           </div>
 
-          <Button className="inline-flex items-center gap-[11px] px-[23px] py-3 bg-[#019454] rounded-md border border-solid border-[#00000033] shadow-[inset_11px_11px_24px_#00442440] h-auto cursor-pointer transform transition-transform duration-300 hover:scale-90">
-            <span className="mt-[-1.00px] font-Roboto font-medium text-white text-base max-[767px]:text-sm tracking-[0] leading-[normal] whitespace-nowrap">
+          <Button asChild className="relative z-[51] inline-flex items-center gap-[11px] px-[23px] py-3 bg-[#019454] rounded-md border border-solid border-[#00000033] shadow-[inset_11px_11px_24px_#00442440] h-auto cursor-pointer transform transition-transform duration-300 hover:scale-90">
+            <a href="/#signup" className="mt-[-1.00px] font-Roboto font-medium text-white text-base max-[767px]:text-sm tracking-[0] leading-[normal] whitespace-nowrap">
               Creat Account
-            </span>
+            </a>
           </Button>
                 
                 
         </main>
 
-        <div className="absolute w-[971px] max-[1300px]:w-[871px] max-[1300px]:h-[898px] max-[600px]:w-[500px] h-[1098px] max-[600px]:h-[600px] top-[130px] -right-[251px] max-[1300px]:-right-[351px] max-[1000px]:top-[450px] max-[600px]:top-[450px] max-[600px]:right-[-400px] max-[350px]:top-[500px] z-11 slide-right-enter slide-animate is-visible">
+        <div className="absolute w-[971px] max-[1300px]:w-[871px] max-[1300px]:h-[898px] max-[600px]:w-[500px] h-[1098px] max-[600px]:h-[600px] top-[130px] -right-[251px] max-[1300px]:-right-[351px] max-[1000px]:top-[450px] max-[600px]:top-[450px] max-[600px]:right-[-400px] max-[350px]:top-[500px] z-11 slide-right-enter slide-animate is-visible pointer-events-none">
           <div className="relative w-[1118px] w-[971px] max-[1300px]:w-[971px] max-[600px]:w-[500px] h-[971px] max-[1300px]:h-[898px] max-[600px]:h-[600px] top-[-130px] left-[-399px]">
             <img
               className="absolute w-[1118px] max-[600px]:w-[500px] h-[650px] max-[600px]:h-[400px]   top-0 left-0"
