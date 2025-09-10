@@ -5,9 +5,9 @@ import ScrollReveal from "../../components/ScrollReveal";
 
 export default function FrameWrapperSubsection  () {
   return (
-    <section className="flex items-center justify-between w-full max-[767px]:flex-col max-[767px]:items-start max-[500px]:gap-5 relative pt-[109px] max-[1000px]:pt-10 px-[120px] max-[1300px]:px-[80px] max-[1100px]:px-[50px] max-[767px]:px-[25px]">
+    <section className="relative z-[51] flex items-center justify-between w-full max-[767px]:flex-col max-[767px]:items-start max-[500px]:gap-5 relative pt-[109px] max-[1000px]:pt-10 px-[120px] max-[1300px]:px-[80px] max-[1100px]:px-[50px] max-[767px]:px-[25px]">
       <ScrollReveal variant="reveal-left">
-      <img className="relative w-[430px] h-[430px] max-[1100px]:w-[400px] max-[1100px]:h-[400px] max-[900px]:w-[300px] max-[900px]:h-[350px] max-[767px]:w-[100%] max-[767px]:h-auto z-10 relative" alt="Frame" src='/Frame-2147223535.png' />
+      <img className="relative w-[430px] h-[430px] max-[1100px]:w-[400px] max-[1100px]:h-[400px] max-[900px]:w-[300px] max-[900px]:h-[350px] max-[767px]:w-[100%] max-[767px]:h-auto z-[51] relative" alt="Frame" src='/Frame-2147223535.png' />
        </ScrollReveal>
 
 

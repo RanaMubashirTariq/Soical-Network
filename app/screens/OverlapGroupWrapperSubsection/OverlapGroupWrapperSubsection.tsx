@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Badge } from "../../components/ui/badge";
 import { Button } from "../../components/ui/button";
 import { TfiAlignJustify } from "react-icons/tfi";
+import Link from "next/link";
+import Image from "next/image";
 
 const navigationItems = [
   { label: "About Us", href: "#about" },
@@ -33,9 +35,9 @@ export default function OverlapGroupWrapperSubsection  ()  {
           <div className="inline-flex items-center h-[38px] gap-[30.94px] px-[15px] py-[7px] bg-[#ffffff4c] rounded-lg border border-solid border-[#00000017] backdrop-blur-[62px] backdrop-brightness-[100%]">
             {navigationItems.map((item, index) => (
               <React.Fragment key={item.label}>
-                <a href={`/${item.href}`} className="font-Roboto font-medium text-black text-lg whitespace-nowrap cursor-pointer">
+                <Link href={`/${item.href}`} className="font-Roboto font-medium text-black text-lg whitespace-nowrap cursor-pointer">
                   {item.label}
-                </a>
+                </Link>
                 {index < navigationItems.length - 1 && (
                   <img src="/blur-line.png" className="w-[1px] h-6" />
                 )}
@@ -43,13 +45,15 @@ export default function OverlapGroupWrapperSubsection  ()  {
             ))}
           </div>
 
-           <a href="/#signup">
-           <img
-            alt="Frame"
-            src="/Frame.png"
-            className="w-[114px] h-[33px] object-cover cursor-pointer transform transition-transform duration-300 hover:scale-90"
-          />
-            </a>
+           <Link href="/#signup"  onClick={() => { if (typeof window !== 'undefined') window.location.hash = 'signup'; }}>
+            <Image
+              alt="Frame"
+              src="/Frame.png"
+              width={114}
+              height={33}
+              className="object-cover cursor-pointer transform transition-transform duration-300 hover:scale-90"
+            />
+           </Link>
 
         </nav>
 
@@ -69,26 +73,27 @@ export default function OverlapGroupWrapperSubsection  ()  {
               key={item.label}
               className="py-2 text-black text-lg font-medium border-b border-gray-300"
             >
-              <a href={`/${item.href}`} className="block " onClick={() => setIsMenuOpen(false)}>
+              <Link href={`/${item.href}`} className="block " onClick={() => setIsMenuOpen(false)}>
                 {item.label}
-              </a>
+              </Link>
             </div>
           ))}
-          
-          <a href="/#signup">
-           <img
-            alt="Frame"
-            src="/Frame.png"
-            className="w-[114px] h-[33px] object-cover cursor-pointer transform transition-transform duration-300 hover:scale-90 mt-4"
-          />
-            </a>
+           <Link href="/#signup"  onClick={() => { if (typeof window !== 'undefined') window.location.hash = 'signup'; }}>
+            <Image
+              alt="Frame"
+              src="/Frame.png"
+              width={114}
+              height={33}
+              className="object-cover cursor-pointer transform transition-transform duration-300 hover:scale-90 mt-4"
+            />
+           </Link>
         </div>
         
       )}
           
       </header>
 
-        <main className="inline-flex flex-col items-start gap-[50px] max-[767px]:gap-[20px] relative z-10 pl-[120px] max-[1300px]:pl-[80px] max-[1100px]:pl-[50px] max-[767px]:px-[25px] pt-[98px] max-[1000px]:pt-10 slide-left-enter slide-animate is-visible">
+        <main className="inline-flex flex-col items-start gap-[50px] max-[767px]:gap-[20px] relative z-20 pl-[120px] max-[1300px]:pl-[80px] max-[1100px]:pl-[50px] max-[767px]:px-[25px] pt-[98px] max-[1000px]:pt-10 slide-left-enter slide-animate is-visible">
           <div className="inline-flex flex-col items-start gap-[30px] max-[767px]:gap-[15px]">
             <h1 className="w-[580px] max-[1100px]:w-[450px] max-[600px]:w-[100%] font-Roboto font-semibold text-black text-[68px] max-[1100px]:text-[48px] max-[1100px]:leading-[52px] max-[767px]:text-[36px] max-[767px]:leading-[38px] tracking-[0] leading-[70px]">
               Grow your network
@@ -103,16 +108,16 @@ export default function OverlapGroupWrapperSubsection  ()  {
             </p>
           </div>
 
-          <Button asChild className="relative z-[51] inline-flex items-center gap-[11px] px-[23px] py-3 bg-[#019454] rounded-md border border-solid border-[#00000033] shadow-[inset_11px_11px_24px_#00442440] h-auto cursor-pointer transform transition-transform duration-300 hover:scale-90">
-            <a href="/#signup" className="mt-[-1.00px] font-Roboto font-medium text-white text-base max-[767px]:text-sm tracking-[0] leading-[normal] whitespace-nowrap">
+          <Button asChild className="relative z-51 inline-flex items-center gap-[11px] px-[23px] py-3 bg-[#019454] rounded-md border border-solid border-[#00000033] shadow-[inset_11px_11px_24px_#00442440] h-auto cursor-pointer transform transition-transform duration-300 hover:scale-90">
+            <Link href="/#signup" onClick={() => { if (typeof window !== 'undefined') window.location.hash = 'signup'; }} className="mt-[-1.00px] font-Roboto font-medium text-white text-base max-[767px]:text-sm tracking-[0] leading-[normal] whitespace-nowrap ">
               Creat Account
-            </a>
+            </Link>
           </Button>
                 
                 
         </main>
 
-        <div className="absolute w-[971px] max-[1300px]:w-[871px] max-[1300px]:h-[898px] max-[600px]:w-[500px] h-[1098px] max-[600px]:h-[600px] top-[130px] -right-[251px] max-[1300px]:-right-[351px] max-[1000px]:top-[450px] max-[600px]:top-[450px] max-[600px]:right-[-400px] max-[350px]:top-[500px] z-11 slide-right-enter slide-animate is-visible pointer-events-none">
+        <div className="absolute w-[971px] max-[1300px]:w-[871px] max-[1300px]:h-[898px] max-[600px]:w-[500px] h-[1098px] max-[600px]:h-[600px] top-[130px] -right-[251px] max-[1300px]:-right-[351px] max-[1000px]:top-[450px] max-[600px]:top-[450px] max-[600px]:right-[-400px] max-[350px]:top-[500px] z-11 slide-right-enter slide-animate is-visible">
           <div className="relative w-[1118px] w-[971px] max-[1300px]:w-[971px] max-[600px]:w-[500px] h-[971px] max-[1300px]:h-[898px] max-[600px]:h-[600px] top-[-130px] left-[-399px]">
             <img
               className="absolute w-[1118px] max-[600px]:w-[500px] h-[650px] max-[600px]:h-[400px]   top-0 left-0"
