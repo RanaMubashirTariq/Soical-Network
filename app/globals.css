@@ -101,3 +101,16 @@ html {
 .font-Roboto{
   font-family: 'Roboto';
 }
+
+/* Hide native password reveal/clear icons (Edge/IE and some WebKit variants) */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+/* Some Chromium/WebKit variants may show an autofill credential button inside password fields */
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+}

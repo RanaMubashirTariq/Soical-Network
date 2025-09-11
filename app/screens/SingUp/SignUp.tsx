@@ -99,7 +99,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
           <div className="px-6 pt-8 pb-6">
             <h2 id="signup-title" className="text-2xl font-semibold text-[#019e54] tracking-tight font-Roboto leading-[100%]">
-              Sign Up
+              Create Account
             </h2>
             <p className="mt-2 text-sm text-black font-Roboto font-regular">
               Create your account by filling the information below.
@@ -135,7 +135,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
                   type="text"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
-                  className="z-10 w-full rounded-xl border text-black border-[#019e54] bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 "
+                  className="z-10 w-full rounded-xl border text-black placeholder:text-black  border-[#019e54] bg-white/20 px-3 py-2 text-sm outline-none focus:ring-4 focus:ring-black/10 "
                   placeholder="Doe"
                   required
                 />
@@ -202,7 +202,7 @@ const [showConfirmPassword, setShowConfirmPassword] = useState(false);
     type={showConfirmPassword ? "text" : "password"} // 👈 toggle type
     value={confirmPassword}
     onChange={(e) => setConfirmPassword(e.target.value)}
-    className="z-10 w-full rounded-xl border text-black placeholder:text-black border-[#019e54] bg-white/20 px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10 dark:border-neutral-700 dark:bg-neutral-950 [&>svg]:hidden"
+    className="z-10 w-full rounded-xl border text-black placeholder:text-black border-[#019e54] bg-white/20 px-3 py-2 pr-10 text-sm outline-none focus:ring-4 focus:ring-black/10  [&>svg]:hidden"
     placeholder="••••••••"
     required
   />
