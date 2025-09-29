@@ -59,7 +59,7 @@ export default function FrameSubsection() {
 
   return (
     <section
-      className="flex flex-col w-full items-start gap-[61px] max-[767px]:gap-[30px] relative max-[767px]:pt-[30px]"
+      className="flex flex-col w-full items-start gap-[61px] max-[767px]:gap-[30px] relative max-[767px]:py-[40px]"
     >
   <div className="flex flex-col gap-5 pl-[120px] max-[1300px]:pl-[80px] max-[1100px]:pl-[50px] max-[767px]:pl-[25px]">
   <Badge
