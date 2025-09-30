@@ -26,72 +26,90 @@ export default function OverlapGroupWrapperSubsection  ()  {
       <div className="relative w-full h-full">
         <img className="w-full h-[650px] max-[1000px]:h-[980px] max-[600px]:h-[780px] max-[350px]:h-[770px]  object-cover  absolute inset-0 z-10" alt="Background" src='background.jpg'/>
 
-        <header className="relative z-50 flex w-full   items-center justify-between px-[120px] max-[1300px]:px-[80px] max-[1100px]:px-[50px] max-[767px]:px-[25px] pt-10 max-[767px]:pt-5 bg-white/30 slide-down-enter slide-animate is-visible">
-        {/* Logo */}
-        <img className="w-16 h-16 max-[767px]:w-11 max-[767px]:h-11" alt="Logo" src="/logo.png" />
+        <header className="relative z-50 flex w-full items-center justify-between px-[120px] max-[1300px]:px-[80px] max-[1100px]:px-[50px] max-[767px]:px-[25px] pt-10 max-[767px]:pt-5 bg-white/30">
+          {/* Logo */}
+          <img
+            className="w-16 h-16 max-[767px]:w-11 max-[767px]:h-11"
+            alt="Logo"
+            src="/logo.png"
+          />
 
-        {/* Desktop Navigation */}
-        <nav className="hidden [@media(min-width:1001px)]:flex items-center gap-[92px] max-[1100px]:gap-8 ">
-          <div className="inline-flex items-center h-[38px] gap-[30.94px] px-[15px] py-[7px] bg-[#ffffff4c] rounded-lg border border-solid border-[#00000017] backdrop-blur-[62px] backdrop-brightness-[100%]">
-            {navigationItems.map((item, index) => (
-              <React.Fragment key={item.label}>
-                <Link href={`/${item.href}`} className="font-Roboto font-medium text-black text-lg whitespace-nowrap cursor-pointer">
+          {/* Desktop Nav */}
+          <nav className="hidden [@media(min-width:1001px)]:flex items-center gap-[92px] max-[1100px]:gap-8">
+            <div className="inline-flex items-center h-[38px] gap-[30.94px] px-[15px] py-[7px] bg-[#ffffff4c] rounded-lg border border-solid border-[#00000017] backdrop-blur-[62px]">
+              {navigationItems.map((item, index) => (
+                <React.Fragment key={item.label}>
+                  <Link
+                    href={`/${item.href}`}
+                    className="font-Roboto font-medium text-black text-lg whitespace-nowrap cursor-pointer"
+                  >
+                    {item.label}
+                  </Link>
+                  {index < navigationItems.length - 1 && (
+                    <img src="/blur-line.png" className="w-[1px] h-6" />
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+
+            <Link href="/#signup">
+              <Image
+                alt="Frame"
+                src="/Frame.png"
+                width={114}
+                height={33}
+                className="object-cover cursor-pointer transform transition-transform duration-300 hover:scale-90"
+              />
+            </Link>
+          </nav>
+
+          {/* Toggle Button */}
+          <button
+            className="[@media(min-width:1001px)]:hidden p-2 rounded-md bg-black/10"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <TfiAlignJustify className="w-[22px] h-[22px] text-[#019e54]" />
+          </button>
+
+          {/* Mobile Menu with Slide-in Transition */}
+          <div
+            className={`[@media(min-width:1001px)]:hidden fixed top-0 right-0 w-[250px] h-full bg-white shadow-lg z-40 p-6 transition-transform duration-500 ease-in-out
+              ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+          >
+            {/* Close Button */}
+            <button
+              className="absolute top-4 right-4 text-2xl font-bold"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              ✕
+            </button>
+
+            {navigationItems.map((item) => (
+              <div
+                key={item.label}
+                className="py-3 text-black text-lg font-medium border-b border-gray-300"
+              >
+                <Link
+                  href={`/${item.href}`}
+                  className="block"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   {item.label}
                 </Link>
-                {index < navigationItems.length - 1 && (
-                  <img src="/blur-line.png" className="w-[1px] h-6" />
-                )}
-              </React.Fragment>
+              </div>
             ))}
+
+            <Link href="/#signup">
+              <Image
+                alt="Frame"
+                src="/Frame.png"
+                width={114}
+                height={33}
+                className="object-cover cursor-pointer transform transition-transform duration-300 hover:scale-90 mt-4"
+              />
+            </Link>
           </div>
-
-           <Link href="/#signup"  onClick={() => { if (typeof window !== 'undefined') window.location.hash = 'signup'; }}>
-            <Image
-              alt="Frame"
-              src="/Frame.png"
-              width={114}
-              height={33}
-              className="object-cover cursor-pointer transform transition-transform duration-300 hover:scale-90"
-            />
-           </Link>
-
-        </nav>
-
-        {/* Mobile Toggle Button (visible ≤ 1000px) */}
-        <button
-          className="[@media(min-width:1001px)]:hidden p-2 rounded-md bg-black/10"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <TfiAlignJustify className="w-[22px] h-[22px] text-[#019e54]" />
-        </button>
-
-
-        {isMenuOpen && (
-        <div className="[@media(min-width:1001px)]:hidden absolute top-24 right-0 w-[200px] bg-white z-20 p-6">
-          {navigationItems.map((item) => (
-            <div
-              key={item.label}
-              className="py-2 text-black text-lg font-medium border-b border-gray-300"
-            >
-              <Link href={`/${item.href}`} className="block " onClick={() => setIsMenuOpen(false)}>
-                {item.label}
-              </Link>
-            </div>
-          ))}
-           <Link href="/#signup"  onClick={() => { if (typeof window !== 'undefined') window.location.hash = 'signup'; }}>
-            <Image
-              alt="Frame"
-              src="/Frame.png"
-              width={114}
-              height={33}
-              className="object-cover cursor-pointer transform transition-transform duration-300 hover:scale-90 mt-4"
-            />
-           </Link>
-        </div>
-        
-      )}
-          
-      </header>
+        </header>
 
         <main className="inline-flex flex-col items-start gap-[50px] max-[767px]:gap-[20px] relative z-20 pl-[120px] max-[1300px]:pl-[80px] max-[1100px]:pl-[50px] max-[767px]:px-[25px] pt-[98px] max-[1000px]:pt-10 slide-left-enter slide-animate is-visible">
           <div className="inline-flex flex-col items-start gap-[30px] max-[767px]:gap-[15px]">
