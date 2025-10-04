@@ -7,7 +7,7 @@ export default function FrameWrapperSubsection  () {
   return (
     <section className="relative z-[51] flex items-center justify-between w-full max-[767px]:flex-col max-[767px]:items-start max-[500px]:gap-5 relative pt-[109px] max-[1000px]:pt-10 px-[120px] max-[1300px]:px-[80px] max-[1100px]:px-[50px] max-[767px]:px-[25px]">
       <ScrollReveal variant="reveal-left">
-      <img className="relative w-[430px] h-[430px] max-[1100px]:w-[400px] max-[1100px]:h-[400px] max-[900px]:w-[300px] max-[900px]:h-[350px] max-[767px]:w-[100%] max-[767px]:h-auto z-[51] relative" alt="Frame" src='/Frame-2147223535.png' />
+      <img className="relative w-[530px] h-[530px] max-[1500px]:w-[430px] max-[1500px]:h-[430px] max-[1100px]:w-[400px] max-[1100px]:h-[400px] max-[900px]:w-[300px] max-[900px]:h-[350px] max-[767px]:w-[100%] max-[767px]:h-auto z-[51] relative" alt="Frame" src='/Frame-2147223535.png' />
        </ScrollReveal>
 
 
@@ -16,13 +16,13 @@ export default function FrameWrapperSubsection  () {
           <div className="flex flex-col items-start gap-[21px] max-[500px]:gap-[15px] relative self-stretch w-full flex-[0_0_auto]">
             <Badge
               variant="secondary"
-              className="inline-flex items-center gap-[8.53px] px-[17.83px] py-[9.3px] relative flex-[0_0_auto] mt-[-0.78px] ml-[-0.78px] rounded-[4.65px] border-[1.55px] border-solid border-[#00000003] backdrop-blur-[17px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(17px)_brightness(100%)] bg-[linear-gradient(141deg,rgba(0,0,0,0.2)_0%,rgba(102,102,102,0.2)_100%)] font-Roboto font-medium text-black text-[12.4px] tracking-[0.50px] leading-[normal]"
+              className="inline-flex items-center gap-[8.53px] px-[17.83px] py-[9.3px] relative flex-[0_0_auto] mt-[-0.78px] ml-[-0.78px] rounded-[4.65px] border-[1.55px] border-solid border-[#00000003] backdrop-blur-[17px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(17px)_brightness(100%)] bg-[linear-gradient(141deg,rgba(0,0,0,0.2)_0%,rgba(102,102,102,0.2)_100%)] font-Roboto font-medium text-black text-sm max-[1500px]:text-[12.4px] tracking-[0.50px] leading-[normal]"
             >
               Networking
             </Badge>
 
             <div className="flex flex-col items-start gap-[27px] max-[500px]:gap-[15px] relative self-stretch w-full flex-[0_0_auto]">
-              <h2 className="relative w-[411px] max-[767px]:w-[100%] mt-[-1.00px] font-Roboto font-semibold text-black text-[53px] max-[1100px]:text-[48px] max-[1000px]:text-[36px] max-[767px]:text-[28px] tracking-[0.27px] leading-[normal]">
+              <h2 className="relative w-[460px] max-[1500px]:w-[411px] max-[767px]:w-[100%] mt-[-1.00px] font-Roboto font-semibold text-black text-[60px] max-[1500px]:text-[53px] max-[1100px]:text-[48px] max-[1000px]:text-[36px] max-[767px]:text-[28px] tracking-[0.27px] leading-[normal]">
                 Why Networking
                 <br className="max-[900px]:hidden" />
                 Com

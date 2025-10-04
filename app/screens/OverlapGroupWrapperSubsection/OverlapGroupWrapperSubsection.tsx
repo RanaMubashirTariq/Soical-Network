@@ -113,7 +113,7 @@ export default function OverlapGroupWrapperSubsection  ()  {
 
         <main className="inline-flex flex-col items-start gap-[50px] max-[767px]:gap-[20px] relative z-20 pl-[120px] max-[1300px]:pl-[80px] max-[1100px]:pl-[50px] max-[767px]:px-[25px] pt-[98px] max-[1000px]:pt-10 slide-left-enter slide-animate is-visible">
           <div className="inline-flex flex-col items-start gap-[30px] max-[767px]:gap-[15px]">
-            <h1 className="w-[580px] max-[1100px]:w-[450px] max-[600px]:w-[100%] font-Roboto font-semibold text-black text-[68px] max-[1100px]:text-[48px] max-[1100px]:leading-[52px] max-[767px]:text-[36px] max-[767px]:leading-[38px] tracking-[0] leading-[70px]">
+            <h1 className="min-[1500px]:w-[680px] w-[580px] max-[1100px]:w-[450px] max-[600px]:w-[100%] font-Roboto font-semibold text-black text-[80px] max-[1500px]:text-[68px] max-[1100px]:text-[48px] max-[1100px]:leading-[52px] max-[767px]:text-[36px] max-[767px]:leading-[38px] tracking-[0] leading-[70px]">
               Grow your network
               all are connected
               in NetworkCom
@@ -127,7 +127,7 @@ export default function OverlapGroupWrapperSubsection  ()  {
           </div>
 
           <Button asChild className="relative z-51 inline-flex items-center gap-[11px] px-[23px] py-3 bg-[#019454] rounded-md border border-solid border-[#00000033] shadow-[inset_11px_11px_24px_#00442440] h-auto cursor-pointer transform transition-transform duration-300 hover:scale-90">
-            <Link href="/#signup" onClick={() => { if (typeof window !== 'undefined') window.location.hash = 'signup'; }} className="mt-[-1.00px] font-Roboto font-medium text-white text-base max-[767px]:text-sm tracking-[0] leading-[normal] whitespace-nowrap ">
+            <Link href="/#signup" onClick={() => { if (typeof window !== 'undefined') window.location.hash = 'signup'; }} className="mt-[-1.00px] font-Roboto font-medium text-white text-lg max-[1500px]:text-base max-[767px]:text-sm tracking-[0] leading-[normal] whitespace-nowrap ">
               Creat Account
             </Link>
           </Button>
@@ -138,7 +138,7 @@ export default function OverlapGroupWrapperSubsection  ()  {
         <div className="absolute w-[971px] max-[1300px]:w-[871px] max-[1300px]:h-[898px] max-[600px]:w-[500px] h-[1098px] max-[600px]:h-[600px] top-[130px] -right-[251px] max-[1300px]:-right-[351px] max-[1000px]:top-[450px] max-[600px]:top-[450px] max-[600px]:right-[-400px] max-[350px]:top-[500px] z-11 slide-right-enter slide-animate is-visible">
           <div className="relative w-[1118px] w-[971px] max-[1300px]:w-[971px] max-[600px]:w-[500px] h-[971px] max-[1300px]:h-[898px] max-[600px]:h-[600px] top-[-130px] left-[-399px]">
             <img
-              className="absolute w-[1118px] max-[600px]:w-[500px] h-[650px] max-[600px]:h-[400px]   top-0 left-0"
+              className="absolute w-[1118px] max-[600px]:w-[500px] h-[650px] max-[600px]:h-[400px]  top-0 left-0"
               alt="Group"
               src='/Group.png'
             />

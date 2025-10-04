@@ -1,6 +1,7 @@
 import React from "react";
 import { Badge } from "../../components/ui/badge";
 import { Card, CardContent } from "../../components/ui/card";
+import Link from "next/link";
 
 export default function DivSubsection  ()  {
   return (
@@ -17,7 +18,7 @@ export default function DivSubsection  ()  {
             <CardContent className="flex flex-col items-center gap-5 p-0">
               <Badge
                 variant="secondary"
-                className="inline-flex items-center gap-[8.53px] px-[17.83px] py-[9.3px] mt-[-0.78px] max-[500px]:mt-5 rounded-[4.65px] border-[1.55px] border-solid border-[#00000003] backdrop-blur-[17px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(17px)_brightness(100%)] bg-[linear-gradient(141deg,rgba(0,0,0,0.2)_0%,rgba(102,102,102,0.2)_100%)] text-black font-Roboto font-medium text-[12.4px] tracking-[0.50px] leading-[normal]"
+                className="inline-flex items-center gap-[8.53px] px-[17.83px] py-[9.3px] mt-[-0.78px] max-[500px]:mt-5 rounded-[4.65px] border-[1.55px] border-solid border-[#00000003] backdrop-blur-[17px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(17px)_brightness(100%)] bg-[linear-gradient(141deg,rgba(0,0,0,0.2)_0%,rgba(102,102,102,0.2)_100%)] text-black font-Roboto font-medium text-sm max-[1500px]:text-[12.4px] tracking-[0.50px] leading-[normal]"
               >
                 Networking
               </Badge>
@@ -35,14 +36,18 @@ export default function DivSubsection  ()  {
                   </p>
                 </div>
 
-                <div className="inline-flex items-start max-[420px]:flex-col">
-                  <img className="w-[250.49px]  h-[92px] max-[1100px]:w-[220px] max-[1100px]:h-[80px] cursor-pointer transform transition-transform duration-300 hover:scale-90" alt="Element f" src='/playstore.png' />
+                <div className="inline-flex items-start max-[330px]:flex-col">
+                  <Link href='https://play.google.com/store'>
+                  <img className="w-[250.49px]  h-[92px] max-[1100px]:w-[220px] max-[1100px]:h-[80px] max-[767px]:w-[160px] max-[767px]:h-14 object-cover  cursor-pointer transform transition-transform duration-300 hover:scale-90" alt="Element f" src='/playstore.png' />
+                  </Link>
 
+                  <Link href='https://www.apple.com/app-store/'>
                   <img
-                    className="w-[235.99px] h-[88.5px] ml-[-16.49px] max-[1100px]:w-[205px] max-[1100px]:h-[80px] max-[420px]:ml-0 cursor-pointer transform transition-transform duration-300 hover:scale-90"
+                    className="w-[235.99px] h-[88.5px] ml-[-16.49px] max-[1100px]:w-[205px] max-[1100px]:h-[80px] max-[767px]:w-[160px] max-[767px]:h-14 object-cover max-[420px]:ml-0 cursor-pointer transform transition-transform duration-300 hover:scale-90"
                     alt="Element f"
                     src='/applestore.png'
                   />
+                  </Link>
                 </div>
               </div>
             </CardContent>
