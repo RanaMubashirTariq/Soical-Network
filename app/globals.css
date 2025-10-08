@@ -124,3 +124,9 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
+}

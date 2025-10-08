@@ -17,7 +17,7 @@ export default function OverlapWrapperSubsection () {
         <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.6)_0%,rgba(0,0,0,0.6)_100%)] z-10"></div>
 
         <div className="relative z-20 flex items-center min-[1500px]:justify-between  max-[767px]:flex-col max-[767px]:items-start gap-[73.33px] max-[900px]:gap-8 w-[1000px] max-[1500px]:w-[837px] mx-auto py-10 max-[1000px]:px-5">
-          <div className="w-[430px]  max-[1500px]:w-[333.33px] h-[333.33px] max-[1000px]:w-[270px] max-[1000px]:h-[270px] max-[800px]:h-[300px] max-[767px]:w-[80%] max-[560px]:w-[55%] max-[500px]:w-[333px] max-[420px]:w-[300px] max-[400px]:w-[280px] max-[400px]:h-[280px] max-[350px]:w-[250px] max-[350px]:h-[250px] max-[330px]:w-[230px]">
+          <div className="w-[333.33px] h-[333.33px] max-[1000px]:w-[270px] max-[1000px]:h-[270px] max-[800px]:h-[300px] max-[767px]:w-[80%] max-[560px]:w-[55%] max-[500px]:w-[333px] max-[420px]:w-[300px] max-[400px]:w-[280px] max-[400px]:h-[280px] max-[350px]:w-[250px] max-[350px]:h-[250px] max-[330px]:w-[230px]">
             <img className="w-full h-full p-0" src='/Frame-2147223552.png' />
           </div>
 

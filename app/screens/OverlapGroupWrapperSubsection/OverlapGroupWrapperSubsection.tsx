@@ -41,7 +41,7 @@ export default function OverlapGroupWrapperSubsection  ()  {
                 <React.Fragment key={item.label}>
                   <Link
                     href={`/${item.href}`}
-                    className="font-Roboto font-medium text-black text-lg whitespace-nowrap cursor-pointer"
+                    className="font-Roboto font-medium text-black text-lg whitespace-nowrap cursor-pointer hover:text-[#019e54] transition-colors duration-300"
                   >
                     {item.label}
                   </Link>
